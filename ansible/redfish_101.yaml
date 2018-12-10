@@ -3,5 +3,8 @@
   tasks:
     - name: test redfish_facts module
       redfish_facts:
-        category: ["Systems", "Accounts", "Update"]
-        baseuri: http://127.0.0.1:8000/redfish/v1/Systems/1
+        category: Manager
+        command: all
+        baseuri: http://127.0.0.1:8000/
+        username: foo
+        password: bar
