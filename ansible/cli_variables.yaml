@@ -1,0 +1,6 @@
+- hosts: all
+  remote_user: root
+  tasks:
+    - name: print variable 'name'
+      debug:
+        msg: '{{ name }}'

@@ -1,0 +1,8 @@
+- hosts: all
+  remote_user: root
+  tasks:
+    - name: test redfish_facts module
+      redfish_facts:
+        category: Systems
+        command: GetCpuInventory
+        baseuri: http://127.0.0.1:8/

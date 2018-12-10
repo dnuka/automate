@@ -1,0 +1,12 @@
+- hosts: all
+  remote_user: root
+  tasks:
+    - name: Ensure the HTTPd package is installed
+      yum:
+        name: httpd
+        state: present
+    - name: Ensure the HTTPd service is enabled and running
+      service:
+        name: httpd
+        state: started
+        enabled: True
