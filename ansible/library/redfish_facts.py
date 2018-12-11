@@ -159,7 +159,7 @@ def main():
              'pswd': module.params['password']}
 
     # Build root URI
-    root_uri = "https://" + module.params['baseuri']
+    root_uri = "http://" + module.params['baseuri']
     rf_uri = "/redfish/v1/"
     rf_utils = RedfishUtils(creds, root_uri)
 
