@@ -1,0 +1,13 @@
+- hosts: all
+  remote_user: root
+  tasks:
+    - name: test get all systems
+      redfish_facts:
+        baseuri: 0.0.0.0:8000
+        username: test
+        password: test
+      register: systems
+
+    - name: display discovered systems
+      debug:
+        var: systems
