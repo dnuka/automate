@@ -1,0 +1,5 @@
+- hosts: all
+  remote_user: root
+  tasks:
+    - name: check if host can reach the database server
+      can_reach: host=138.68.7.87 port=8000 timeout=1
